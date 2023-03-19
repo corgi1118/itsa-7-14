@@ -197,8 +197,38 @@ int euc(int a, int b)
 ![image](https://user-images.githubusercontent.com/126050259/226163108-fc68b1e4-a45d-42fc-9424-7ee052d34ef7.png)
 ### 程式說明:
 ```
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a,b,count;
+	int *num;
+	count = 0;
+	cin >> a >> b;
+	num = new int[a * b];
+	for (int i = 0;i < (a * b); i++)
+	{
+		cin >> num[i];
+	}
+	for (int i = 0;i < b; i++)
+	{
+		for (int j = 0;j < a; j++)
+		{
+			count++;
+			cout << num[j * b + i];
+			if (count % a != 0)
+			cout << " ";
+		}
+		cout << endl;
+	}
+	delete []num;
+	return 0;
+}
 
 ```
+兩個整數輸入 a 和 b，並動態分配一個整數陣列 num。 num 陣列大小為 a * b。接著透過兩個迴圈將輸入的數字存入陣列中。接下來的兩個迴圈會將 num 陣列中的元素輸出，輸出格式為從上到下的方式，每列以空格分隔元素，列與列之間則換行。最後，釋放 num 陣列的動態記憶體空間，並返回0。
+
 
 ## 題目12. 遞迴程式練習
 ### 問題描述 ：
