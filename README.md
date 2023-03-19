@@ -254,4 +254,4 @@ int main() {
     return 0;
 }
 ```
-
+利用for迴圈將input字串的最後一個字元開始取出到output字串中，並檢查兩個字串對應位子的字元是否相同，並印出YES或NO
