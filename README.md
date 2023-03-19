@@ -158,8 +158,32 @@ int main() {
 假設輸入為 300 與 250, 則輸出為 50
 ### 程式說明
 ```
+#include<iostream>
+using namespace std;
 
+int euc(int a, int b);
+int main()
+{
+	int in = 0, in2 = 0, c = 0;
+
+	cin >> in >> in2;
+	if (in < in2)
+	{
+		c = in;
+		in = in2;
+		in2 = c;
+	}
+	cout << euc(in, in2) << endl;
+	return 0;
+}
+int euc(int a, int b)
+{
+	int f = a % b;
+	if (f == 0) return b;
+	else return euc(b, f);
+}
 ```
+![image](https://user-images.githubusercontent.com/126050259/226184286-3503aa35-68da-4524-a708-6c1ba29e8016.png)
 
 
 ## 題目11. 矩陣反轉
@@ -173,6 +197,7 @@ int main() {
 ![image](https://user-images.githubusercontent.com/126050259/226163108-fc68b1e4-a45d-42fc-9424-7ee052d34ef7.png)
 ### 程式說明:
 ```
+
 ```
 
 ## 題目12. 遞迴程式練習
