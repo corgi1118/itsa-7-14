@@ -128,7 +128,24 @@ int main()
 ![image](https://user-images.githubusercontent.com/126050259/226162999-6f010e65-27a6-4801-8173-17aee3330924.png)
 ### 程式說明
 ```
+#include <iostream> 
+
+using namespace std;
+
+int main() {
+    int n, sum = 0;
+    cin >> n;
+    for (int i = 1; i <= n; i++) {
+        if (i % 3 == 0) {
+            sum += i;
+        }
+    }
+    cout << sum << endl;
+    return 0;
+}
+
 ```
+![image](https://user-images.githubusercontent.com/126050259/226165064-022463e0-2275-4b0b-93d5-5a878f61fa65.png)
 
 ## 題目10. 輾轉相除法
 ### 問題描述：
@@ -141,7 +158,9 @@ int main()
 假設輸入為 300 與 250, 則輸出為 50
 ### 程式說明
 ```
+
 ```
+
 
 ## 題目11. 矩陣反轉
 ### 問題描述 ：
@@ -190,6 +209,8 @@ int main(){
     return 0;
 }
 ```
+函數f(n):如果n為0或1，則回傳n+1 如果n大於1則回傳f(n-1) + f(n/2) 的結果 \
+在 main() 函數中，程式先輸入一個整數 n，然後呼叫函數 f(n) 取得結果並輸出到標準輸出流
 
 
 
